@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Lary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-coffee.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="image/Logo.png" alt="Logo Coffee Lari" class="logo">
+    <h1>Coffee Lary</h1>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="order-container">
+    <!-- Daftar Produk -->
+    <section class="product-list">
+      <h2></h2>
+      <div class="tabs">
+        <button class="tab active" onclick="changeCategory('coffee')">Coffee</button>
+        <button class="tab" onclick="changeCategory('noncoffee')">Non-Coffee</button>
+        <button class="tab" onclick="changeCategory('snack')">Snack</button>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <!-- Ringkasan Pesanan -->
+    <section class="order-summary">
+      <h2>List Pesanan</h2>
+      <ul id="order-items" class="order-items"></ul>
+      <p class="total">Total: Rp <span id="total-price">0</span></p>
+
+      <form id="order-form" class="order-form">
+        <input type="text" id="customer-name" placeholder="Nama Anda" required>
+        <input type="email" id="customer-email" placeholder="Email Anda" required>
+        <select id="payment-method" required>
+          <option value="" disabled selected>Pilih Metode Pembayaran</option>
+          <option value="transfer">Transfer Bank</option>
+          <option value="qris">QRIS</option>
+          <option value="cod">Bayar di Tempat</option>
+        </select>
+        <button type="button" class="btn" onclick="submitOrder()">Pesan Sekarang</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Invoice Popup -->
+  <div id="invoice" class="invoice hidden">
+    <h2></h2>
+    <p><strong></strong> <span id="invoice-id"></span></p>
+    <p><strong></strong> <span id="invoice-date"></span></p>
+    <div id="invoice-details"></div>
+    <p><strong></strong><span id="invoice-total"></span></p>
+    <button class="btn" onclick="downloadInvoice()"></button>
+    <button class="btn" onclick="resetOrder()"></button>
+  </div>
+
+  <script src="script-coffee.js"></script>
+  
+    <footer>
+      <p>&copy; 2025 Coffee Co. All rights reserved/Gilang Permana Putra/221011450531/05TPLE005.</p>
+    </footer>
+</body>
+</html>

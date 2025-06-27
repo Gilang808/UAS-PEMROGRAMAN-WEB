@@ -1,0 +1,136 @@
+/* Import Font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('image/COFFE.jpg'); /* Ganti sesuai nama file */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.114);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.header-bar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px); /* Efek buram */
+  color: #000000;
+  padding: 10px 20px;
+  z-index: 1000; /* Memastikan header tetap di atas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.675); /* Bayangan elegan */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  align-items: center; /* Selaraskan secara vertikal */
+  background-color: rgba(0, 0, 0, 0.796);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 3px #fff);
+  transition: 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.center-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Order Button */
+.order-button {
+  background-color: #c19a6b;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.order-button:hover {
+  background-color: #a8794f;
+  cursor: pointer;
+}
+
+.order-button:active {
+  transform: scale(0.97);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.772);
+  font-size: 0.9rem;
+}
+
+/* Popup Success */
+.popup-success {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.869);
+  font-weight: 600;
+  z-index: 9999;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
