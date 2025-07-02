@@ -1,334 +1,334 @@
-/* Import Font Poppins dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  /* Import Font Poppins dari Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset & Font */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* General Styles */
-body {
-  background-image: url('image/COFFE.jpg');
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.765); /* Ganti sesuai nama file */
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f7f0c3;
-  color: #333333d0;
-}
-
-/* Header Styles */
-header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px); /* Efek buram */
-  background-color: rgba(0, 0, 0, 0.387); /* Warna semi-transparan untuk efek gelap */
-  color: #ffffff;
-  padding: 10px 20px;
-  z-index: 1000; /* Memastikan header tetap di atas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.441); /* Bayangan elegan */
-  display: flex; /* Menggunakan flexbox untuk tata letak */
-  align-items: center; /* Selaraskan secara vertikal */
-}
-
-/* Overlay untuk efek gelap */
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay transparan */
-  z-index: 0;
-}
-
-header h1 {
-  position: relative;
-  z-index: 1; /* Membawa teks ke depan */
-  font-size: 1.5rem;
-  margin: 0 0 0 10px; /* Jarak antara logo dan teks */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan untuk teks */
-}
-
-header .logo {
-  position: relative;
-  z-index: 1; /* Membawa logo ke depan */
-  width: 40px; /* Tingkatkan ukuran dari 40px menjadi 60px */
-  height: auto; /* Tetap mempertahankan rasio aspek gambar */
-}
-
-
-/* Mengatur tata letak logo dan teks secara horizontal */
-header .header-content {
-  display: flex;
-  align-items: center;
-  z-index: 1; /* Membawa konten ke depan */
-}
-
-
-/* Background for Menu Order */
-.menu-content {
-  background: url('/image/COFFE.jpg') no-repeat center center/cover;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #f4f4f4c9;
-}
-
-.menu-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay untuk memperjelas teks */
-  z-index: 0;
-}
-
-
-
-/* Align Product Grid to the Left */
-#product-grid {
-  justify-content: start; /* Mulai dari sisi kiri */
-}
-
-
-
-/* Layout */
-.layout {
-  display: flex;
-  gap: 20px;
-}
-
-.image-frame {
-  flex: 1;
-  position: sticky;
-  top: 20px;
-  height: 80vh;
-  overflow: hidden;
-}
-
-.image-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.menu-content {
-  flex: 2;
-}
-
-/* Product Grid */
-#product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 30px;
-}
-
-.product {
-  background-color: #ffffff90;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-}
-
-.product img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.product h3 {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.product .price {
-  color: #6b4f37;
-  font-weight: bold;
-}
-
-.counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.counter button {
-  padding: 5px 10px;
-  border: none;
-  background-color: #6b4f37;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.counter input {
-  width: 50px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-/* Order Summary */
-.order-summary {
-  background-color: #ffffff8d;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.order-summary h2 {
-  margin-bottom: 20px;
-  font-size: 1.5em;
-}
-
-.order-summary ul {
-  list-style: none;
-  padding: 0;
-  gap: 10px;
-}
-
-.order-summary li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.order-summary .total {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.order-summary button {
-  background-color: #6b4f37;
-  color: #ffffff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.order-summary button:hover {
-  background-color: #543d2b;
-}
-
-.tabs {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0; /* Memberikan jarak ke bawah */
-}
-
-.tabs .tab {
-  padding: 10px 20px; /* Penyesuaian padding untuk ukuran tombol */
-  background: #f1ece8ad;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.tabs .tab:hover,
-.tabs .tab.active {
-  background: #6b4f37;
-  color: #fff;
-}
-
-/* Form Styling */
-.order-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.order-form label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.order-form input, 
-.order-form select {
-  width: 100%; /* Menggunakan seluruh ruang elemen induk */
-  max-width: 400px; /* Membatasi panjang maksimal */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Pusatkan jika diperlukan */
-  box-sizing: border-box; /* Pastikan padding tidak memperbesar ukuran */
-}
-.order-form input:hover,
-.order-form select:hover {
-  border-color: #9e7d5f;
-}
-
-.order-form input:focus,
-.order-form select:focus {
-  border-color: #6b4f37;
-  outline: none;
-  box-shadow: 0 0 4px rgba(107, 79, 55, 0.3);
-}
-
-.order-form .btn {
-  width: 100%;
-  background-color: #6b4f37;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.order-form .btn:hover {
-  background-color: #543d2b;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-  .order-summary {
-    max-width: 90%;
-    padding: 15px;
+  /* Reset & Font */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
-}
 
-/* Footer */
-footer {
-  position: sticky;
-  bottom: 0; /* Tetap menempel di bawah */
-  backdrop-filter: blur(10px); /* Efek buram */
-  background-color: rgba(0, 0, 0, 0.7); /* Warna semi-transparan */
-  color: white; /* Warna teks */
-  text-align: center;
-  padding: 10px 20px;
-  z-index: 1000; /* Memastikan berada di atas elemen lain */
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4); /* Bayangan untuk efek elegan */
-}
+  /* General Styles */
+  body {
+    background-image: url('image/COFFE.jpg');
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.765); /* Ganti sesuai nama file */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f0c3;
+    color: #333333d0;
+  }
+
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px); /* Efek buram */
+    background-color: rgba(0, 0, 0, 0.387); /* Warna semi-transparan untuk efek gelap */
+    color: #ffffff;
+    padding: 10px 20px;
+    z-index: 1000; /* Memastikan header tetap di atas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.441); /* Bayangan elegan */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Selaraskan secara vertikal */
+  }
+
+  /* Overlay untuk efek gelap */
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay transparan */
+    z-index: 0;
+  }
+
+  header h1 {
+    position: relative;
+    z-index: 1; /* Membawa teks ke depan */
+    font-size: 1.5rem;
+    margin: 0 0 0 10px; /* Jarak antara logo dan teks */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan untuk teks */
+  }
+
+  header .logo {
+    position: relative;
+    z-index: 1; /* Membawa logo ke depan */
+    width: 40px; /* Tingkatkan ukuran dari 40px menjadi 60px */
+    height: auto; /* Tetap mempertahankan rasio aspek gambar */
+  }
+
+
+  /* Mengatur tata letak logo dan teks secara horizontal */
+  header .header-content {
+    display: flex;
+    align-items: center;
+    z-index: 1; /* Membawa konten ke depan */
+  }
+
+
+  /* Background for Menu Order */
+  .menu-content {
+    background: url('/image/COFFE.jpg') no-repeat center center/cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #f4f4f4c9;
+  }
+
+  .menu-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay untuk memperjelas teks */
+    z-index: 0;
+  }
+
+
+
+  /* Align Product Grid to the Left */
+  #product-grid {
+    justify-content: start; /* Mulai dari sisi kiri */
+  }
+
+
+
+  /* Layout */
+  .layout {
+    display: flex;
+    gap: 20px;
+  }
+
+  .image-frame {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .menu-content {
+    flex: 2;
+  }
+
+  /* Product Grid */
+  #product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .product {
+    background-color: #ffffff90;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .product:hover {
+    transform: translateY(-5px);
+  }
+
+  .product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .product .price {
+    color: #6b4f37;
+    font-weight: bold;
+  }
+
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .counter button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #6b4f37;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .counter input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  /* Order Summary */
+  .order-summary {
+    background-color: #ffffff8d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .order-summary h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+  .order-summary ul {
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .order-summary .total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .order-summary button {
+    background-color: #6b4f37;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .order-summary button:hover {
+    background-color: #543d2b;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0; /* Memberikan jarak ke bawah */
+  }
+
+  .tabs .tab {
+    padding: 10px 20px; /* Penyesuaian padding untuk ukuran tombol */
+    background: #f1ece8ad;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .tabs .tab:hover,
+  .tabs .tab.active {
+    background: #6b4f37;
+    color: #fff;
+  }
+
+  /* Form Styling */
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .order-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .order-form input, 
+  .order-form select {
+    width: 100%; /* Menggunakan seluruh ruang elemen induk */
+    max-width: 400px; /* Membatasi panjang maksimal */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Pusatkan jika diperlukan */
+    box-sizing: border-box; /* Pastikan padding tidak memperbesar ukuran */
+  }
+  .order-form input:hover,
+  .order-form select:hover {
+    border-color: #9e7d5f;
+  }
+
+  .order-form input:focus,
+  .order-form select:focus {
+    border-color: #6b4f37;
+    outline: none;
+    box-shadow: 0 0 4px rgba(107, 79, 55, 0.3);
+  }
+
+  .order-form .btn {
+    width: 100%;
+    background-color: #6b4f37;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .order-form .btn:hover {
+    background-color: #543d2b;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .order-summary {
+      max-width: 90%;
+      padding: 15px;
+    }
+  }
+
+  /* Footer */
+  footer {
+    /*position: sticky;*/
+    bottom: 0; /* Tetap menempel di bawah */
+    backdrop-filter: blur(10px); /* Efek buram */
+    background-color: rgba(0, 0, 0, 0.7); /* Warna semi-transparan */
+    color: white; /* Warna teks */
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Memastikan berada di atas elemen lain */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4); /* Bayangan untuk efek elegan */
+  }
 
